@@ -364,7 +364,7 @@ class CalculatorActivity : AppCompatActivity() {
            for (token in postfix) {
                when (token) {
                    "." -> stack.push(token)
-                   "+", "-", "*", "/" -> { // Operator (+, -, *, /)
+                   "+", "-", "*", "/", "%" -> { // Operator (+, -, *, /)
                        val operand2 = stack.pop().toFloat()
                        if(stack.isEmpty())
                            return operand2
